@@ -26,7 +26,7 @@ export default function App() {
     </View>
   );
 }
-
+//lalala
 // Estilos usando StyleSheet (similar a CSS, mas com sintaxe JavaScript)
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     padding: 20,             // Espaçamento interno
   },
   title: {
-    fontSize:40             // Tamanho da fonte grande
+    fontSize:40,             // Tamanho da fonte grande
     fontWeight: 'bold',       // Negrito
     color: '#FFFF00',         // Cor principal (ex: azul turquesa)
     marginBottom: 10,         // Espaço abaixo do título
