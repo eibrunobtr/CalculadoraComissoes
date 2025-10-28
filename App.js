@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
+  //bla bla bla
     // O View é como uma 'div' no React Native. Ele é o container da tela.
     <View style={styles.container}>
       
