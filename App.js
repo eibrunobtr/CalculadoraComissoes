@@ -8,12 +8,12 @@ export default function App() {
       
       {/* Título principal do aplicativo de turismo */}
       <Text style={styles.title}>
-        Descubra o Mundo!
+        Descubra o Espirito Santo!
       </Text>
       
       {/* Mensagem de boas-vindas / Subtítulo */}
       <Text style={styles.subtitle}>
-        Seu guia de turismo em dispositivos móveis
+        Seu guia de turismo capixaba na palma da sua mão
       </Text>
 
       {/* Exibe uma saudação simples */}
@@ -31,15 +31,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,                 // Ocupa toda a tela
-    backgroundColor: '#E6F0FF', // Cor de fundo suave (ex: azul claro)
+    backgroundColor: '#ADD8E6', // Cor de fundo suave (ex: azul claro)
     alignItems: 'center',    // Centraliza o conteúdo horizontalmente
     justifyContent: 'center',// Centraliza o conteúdo verticalmente
     padding: 20,             // Espaçamento interno
   },
   title: {
-    fontSize: 32,             // Tamanho da fonte grande
+    fontSize:40             // Tamanho da fonte grande
     fontWeight: 'bold',       // Negrito
-    color: '#007BFF',         // Cor principal (ex: azul turquesa)
+    color: '#FFFF00',         // Cor principal (ex: azul turquesa)
     marginBottom: 10,         // Espaço abaixo do título
   },
   subtitle: {
