@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
+  //bla bla bla
     // O View é como uma 'div' no React Native. Ele é o container da tela.
     <View style={styles.container}>
       
@@ -31,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,                 // Ocupa toda a tela
-    backgroundColor: '#ADD8E6', // Cor de fundo suave (ex: azul claro)
+    backgroundColor: '#FFFAFA', // Cor de fundo suave (ex: azul claro)
     alignItems: 'center',    // Centraliza o conteúdo horizontalmente
     justifyContent: 'center',// Centraliza o conteúdo verticalmente
     padding: 20,             // Espaçamento interno
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
     fontSize:40,             // Tamanho da fonte grande
     fontWeight: 'bold',       // Negrito
     color: '#FFFF00',         // Cor principal (ex: azul turquesa)
+	textAlign: 'center',
     marginBottom: 10,         // Espaço abaixo do título
   },
   subtitle: {
