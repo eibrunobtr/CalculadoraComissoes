@@ -7,7 +7,7 @@ import { getStorage } from "firebase/storage";
 // 2. SUAS CHAVES (COPIEI DA SUA IMAGEM)
 // (Não se preocupe, o measurementId do Analytics não atrapalha)
 const firebaseConfig = {
-  apiKey: "AIzaSyDo5IoqRgzfqdhY_-TfJDBveqEAhcHadg",
+  apiKey: "AIzaSyDo5IoqRgzfqdhY_-TfJDBveqVEahcHAdg",
   authDomain: "oppoapp-a09c1.firebaseapp.com",
   projectId: "oppoapp-a09c1",
   storageBucket: "oppoapp-a09c1.firebasestorage.app",

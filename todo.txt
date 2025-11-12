@@ -1,0 +1,29 @@
+Aprender a incluir uma conexao com o firebase para conseguir usar pelo menos uma vez na aplicação
+
+Iniciar a criação da tela de login
+
+Incluir uma conexao com o firebase para a tela de login
+
+Incluir uma conexao com o firebase na tela principal da aplicação
+	
+Continuar o desenvolvimento da tela principal da aplicacao
+	-Melhorar a estética dos botões, cores e plano de fundo para deixar mais bonito
+    -Acrescentar as fotos dos respectivos dispositivos disponiveis pra venda na tela 
+
+Acrescentar uma aba de pedido de material ao rh
+
+acrescentar uma tela/aba para que o promotor possa preencher o sellout do que ele tem disponivel pra venda
+
+Analisar/verificiar a possibilidade de deixar faciltado para quem puder ter acesso o acrescimo de novos funcionarios
+
+Inserir notificaçoes de incentivo para quando o promotor e o supervisor estiver proximo da meta diaria, proximo da meta mensal, ou proximo da meta semanal de low end e high end
+	--obs.:os novos funcionarios deverao ter seu dados la dentro, onde a gestao sera alertada ao aproximar os 45 dias e os 90 dias de experiencia
+
+Inserir aba/tela extra para incetivos diarios, e ou sazonais, para controle do promotor dos bonus
+
+
+
+
+
+
+
