@@ -1,26 +1,37 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// Importa as telas que vamos criar
+// Importa as telas de Autenticação
 import LoginScreen from '../screens/LoginScreen';
-import HomeScreen from '../screens/HomeScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 
-const Stack = createNativeStackNavigator(); // Cria a "pilha"
+// IMPORTANTE: Agora importamos o Navegador de Abas em vez da HomeScreen
+import MainTabNavigator from './MainTabNavigator';
+
+const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
   return (
     <Stack.Navigator>
-      {/* Define a tela de Login como a primeira tela */}
+      {/* Telas de Autenticação (Sem abas) */}
       <Stack.Screen 
         name="Login" 
         component={LoginScreen} 
-        options={{ headerShown: false }} // Esconde o cabeçalho "Login"
+        options={{ headerShown: false }}
       />
       
-      {/* Define a tela Home */}
+      <Stack.Screen 
+        name="SignUp" 
+        component={SignUpScreen} 
+        options={{ headerShown: false }}
+      />
+      
+      {/* Tela Principal (COM ABAS) */}
+      {/* Quando fizermos navigation.navigate('Home'), ele vai carregar as abas */}
       <Stack.Screen 
         name="Home" 
-        component={HomeScreen} 
+        component={MainTabNavigator} 
+        options={{ headerShown: false }} // Esconde o cabeçalho duplo
       />
     </Stack.Navigator>
   );
