@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert, Pressable } from 'react-native'; // NOVO: Importa o Pressable
-
-// 1. IMPORTAR AS FUNÇÕES DE LOGIN E RESET
-import { auth } from '../firebaseConfig'; 
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth'; // NOVO: Importa sendPasswordResetEmail
+import { View, Text, TextInput, Button, StyleSheet, Alert, Pressable } from 'react-native';
+import { auth } from '../firebaseConfig';
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 
 function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
@@ -14,7 +12,6 @@ function LoginScreen({ navigation }) {
       Alert.alert('Erro', 'Por favor, preencha e-mail e senha.');
       return;
     }
-    
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Usuário logado:', userCredential.user.email);
@@ -25,24 +22,16 @@ function LoginScreen({ navigation }) {
       });
   };
 
-  // 2. NOVO: FUNÇÃO PARA REDEFINIR A SENHA
   const handlePasswordReset = () => {
-    // Validação simples para ver se o e-mail foi preenchido
     if (!email) {
       Alert.alert('Erro', 'Por favor, digite seu e-mail no campo acima.');
       return;
     }
-
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        // Sucesso!
-        Alert.alert(
-          'Verifique seu e-mail', 
-          'Enviamos um link para redefinição de senha para ' + email
-        );
+        Alert.alert('Verifique seu e-mail', 'Link de redefinição enviado para ' + email);
       })
       .catch((error) => {
-        // Erro!
         Alert.alert('Erro', error.message);
       });
   };
@@ -68,21 +57,22 @@ function LoginScreen({ navigation }) {
         secureTextEntry
       />
       
-      <Button title="Entrar" onPress={handleLogin} />
+      <View style={{ marginBottom: 20 }}>
+        <Button title="Entrar" onPress={handleLogin} />
+      </View>
 
-      {/* 3. NOVO: TEXTO CLICÁVEL PARA ESQUECI MINHA SENHA */}
-      <Pressable onPress={handlePasswordReset} style={{ marginTop: 20 }}>
-        <Text style={styles.forgotPasswordText}>
-          Esqueci minha senha
-        </Text>
+      <Pressable onPress={handlePasswordReset}>
+        <Text style={styles.forgotPasswordText}>Esqueci minha senha</Text>
       </Pressable>
-      
-      {/* (OPCIONAL - PODEMOS ADICIONAR DEPOIS)
+
+      {/* BOTÃO DE CADASTRO ATIVO */}
+      <View style={{ marginTop: 30, width: '100%' }}>
         <Button 
           title="Não tem conta? Cadastre-se" 
           onPress={() => navigation.navigate('SignUp')}
-        /> 
-      */}
+          color="green"
+        />
+      </View>
     </View>
   );
 }
@@ -108,10 +98,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 8,
   },
-  // NOVO: Estilo para o texto de "Esqueci minha senha"
   forgotPasswordText: {
     color: 'blue',
     textDecorationLine: 'underline',
+    marginBottom: 10,
   },
 });
 
